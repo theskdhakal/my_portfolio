@@ -23,14 +23,26 @@
     />
   </head>
   <body>
+    <!-- dark mode button  -->
+    <input type="checkbox" id="darkmode" class="dark-mode-checkbox" />
     <div class="wrapper">
+      <label for="darkmode">
+        <i class="fa fa-toggle-on  dark-mode-toggle" aria-hidden="true"></i></i>
+      </label>
       <!-- header -->
       <nav class="primary-header flex">
         <div class="logo">
-          <h1><<span>SK</span>/></h1>
+          <h1 ><<span>SK</span>/>
+          
+          
+          </h1>
         </div>
 
         <div class="menu">
+          <input type="checkbox" id="check"/>
+          <label for="check" class="menu-icon">
+            <i class="fa-solid fa-bars"></i>
+          </label>
           <ul class="navigation flex">
             <li><a href="home">Home</a></li>
             <li><a href="skills">Skills</a></li>
@@ -93,39 +105,39 @@
       </section> -->
 
       <!-- skill section  -->
-      <section class="section3">
-        <div class="skills-container flex">
-          <div class="flex">
-            <img src="asset/html.png" alt="" class="icons" />
-            <span>HTML</span>
-          </div>
 
-          <div class="flex">
-            <img src="asset/css.png" alt="" class="icons" />
-            <span>CSS</span>
-          </div>
-
-          <div class="flex">
-            <img src="asset/js.png" alt="" class="icons" />
-
-            <span>JavaScript</span>
-          </div>
-
-          <div class="flex">
-            <img src="asset/react.png" alt="" class="icons" />
-            <span>React</span>
-          </div>
-
-          <div class="flex">
-            <img src="asset/firebase.png" alt="" class="icons" />
-            <span>firebase</span>
-          </div>
+      <div class="skills-container flex">
+        <h1>Skills</h1>
+        <div class="flex">
+          <img src="asset/html.png" alt="" class="icons" />
+          <span>HTML</span>
         </div>
-      </section>
+
+        <div class="flex">
+          <img src="asset/css.png" alt="" class="icons" />
+          <span>CSS</span>
+        </div>
+
+        <div class="flex">
+          <img src="asset/js.png" alt="" class="icons" />
+
+          <span>JavaScript</span>
+        </div>
+
+        <div class="flex">
+          <img src="asset/react.png" alt="" class="icons" />
+          <span>React</span>
+        </div>
+
+        <div class="flex">
+          <img src="asset/firebase.png" alt="" class="icons" />
+          <span>firebase</span>
+        </div>
+      </div>
 
       <!-- project section  -->
       <section class="section4 flex" id="projects">
-        <h1 class="title">MY Projects</h1>
+        <h1 class="title">Recent Projects</h1>
 
         <div class="project-container grid">
           <div class="project-card flex">
@@ -188,7 +200,7 @@
 
       <!-- About section  -->
       <section class="about">
-        <h1 class="title">About ME</h1>
+        <h1 class="title">About Me</h1>
         <div class="about-container flex">
           <div class="left flex">
             <div class="bg"></div>
@@ -255,8 +267,11 @@
 
       <!-- contact-section  -->
       <section class="section6 flex" id="contact">
-        <h1 class="title">Get in Touch</h1>
+        <h1 class="title">Contact</h1>
         <div class="content flex">
+          <div class="visual">
+            <img src="/asset/point.png" alt=""  />
+          </div>
           <div class="socials flex">
             <i class="fa-brands fa-linkedin"></i>
             <i class="fa-brands fa-facebook"></i>
@@ -265,7 +280,7 @@
             <i class="fa-brands fa-instagram"></i>
           </div>
 
-          <h1 style="margin-left: 25rem">OR</h1>
+          <h1 >OR</h1>
           <div class="email-section flex">
             <p>Reach out over email</p>
             <div class="email">
