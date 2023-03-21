@@ -152,7 +152,7 @@ body {
   margin: 0;
   padding: 0;
   background: var(--background-bg);
-  overflow: hidden;
+  // overflow: hidden;
   position: relative;
 
   video {
@@ -422,22 +422,26 @@ body {
     align-items: center;
     flex-direction: column;
     .interest-card {
-      flex-direction: column;
-      width: 600px;
+      width: 80%;
       border: 3px solid black;
-
+      flex-direction: column;
       h2 {
         color: var(--text-color);
       }
 
-      img {
-        width: 595px;
-        object-fit: cover;
-        border: 2px solid green;
-      }
+      .box {
+        border-top: 2px solid green;
+        overflow-x: hidden;
+        img {
+          max-width: 40%;
+        }
 
-      p {
-        color: var(--text-color);
+        p {
+          color: var(--text-color);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
       }
     }
   }
@@ -503,7 +507,7 @@ body {
   }
 
   .content {
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
     position: relative;
@@ -519,13 +523,11 @@ body {
       }
     }
 
-    h1 {
-      margin-right: -16rem;
-    }
-
     .socials {
       height: 70vh;
       gap: 8rem;
+      background-color: green;
+      position: relative;
 
       .fa-github {
         position: absolute;
@@ -590,59 +592,79 @@ body {
       // background-color: white !important;
     }
 
-    .email-section {
-      margin-top: 2rem;
-      flex-direction: column;
+    .new-right {
+      display: flex;
+      justify-content: space-between;
       align-items: center;
-      gap: 2rem;
+      flex-direction: row;
+      gap: 13rem;
+      margin-right: 3rem;
 
-      p {
-        color: var(--text-color);
+      .email-section {
+        margin-top: 2rem;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+
+        p {
+          color: var(--text-color);
+        }
       }
-    }
-    .email-section .email {
-      background: #2a2a2a;
-      display: flex;
-      align-items: center;
-      padding: 1rem 2rem;
-      border-radius: 100px;
-      gap: 1rem;
-      cursor: pointer;
-    }
-    .email-section .email a {
-      color: rgb(241, 233, 233);
-    }
-    .email-section .email .send {
-      width: 3rem;
-      height: 3rem;
-      border-radius: 50%;
-      background: rgb(203, 201, 67);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: white;
+      .email-section .email {
+        background: #2a2a2a;
+        display: flex;
+        align-items: center;
+        padding: 1rem 2rem;
+        border-radius: 100px;
+        gap: 1rem;
+        cursor: pointer;
+      }
+      .email-section .email a {
+        color: rgb(241, 233, 233);
+      }
+      .email-section .email .send {
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        background: rgb(203, 201, 67);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+      }
     }
   }
 
-  @include laptop() {
+  @include tablet() {
     .content {
       width: 70%;
       gap: 2rem;
       flex-direction: column;
+      align-items: start;
+      justify-content: center;
       margin-bottom: 2rem;
+
       .visual {
         position: absolute;
         top: 1rem;
         left: 1rem;
         transform: rotate(235deg);
-
         img {
           width: 5rem;
         }
       }
 
-      h1 {
-        text-align: center;
+      .socials {
+        gap: 5rem;
+
+        .fa-brands {
+          font-size: 2.8rem;
+        }
+      }
+
+      .new-right {
+        flex-direction: column;
+        gap: 3rem;
       }
     }
   }
